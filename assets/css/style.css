@@ -55,6 +55,17 @@
     /*========== Responsive Typography ==========*/
     
     /*========== Base ==========*/
+    @media screen and (max-width:992px)
+    {
+      :root 
+      {
+        --h1-font-size: 1.75rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1rem;
+       --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+      }
+    }
     * 
     {
       margin: 0; 
@@ -126,7 +137,7 @@
     }
     .section-title
     {
-      font-size: 2.25rem;
+      font-size: var(--h1-font-size);
       margin-left: var(--m-0-75);
       margin-bottom: var(--m-2-5);
     }
@@ -1066,7 +1077,175 @@
     }
     
     /*========== Customize Theme ==========*/
+    .customize-theme
+    {
+      background: rgba(0, 0, 0, .9);
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0; 
+      left: 0;
+      z-index: 100;
+      text-align: center;
+      display: grid;
+      place-items: center;
+      font-size: var(--small-font-size);
+    }
+
+    .customize-theme .card 
+    {
+      background: var(--color-white);
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      width: 40%;
+      max-width: 600px;
+    }
+
+    .customize-theme .font-size 
+    {
+      margin-top: var(--m-2-5);
+    }
+
+    .customize-theme .font-size > div 
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--color-light);
+      padding: .6rem 1rem;
+      border-radius: var(--border-radius);
+    }
+
+    .customize-theme .choose-size
+    {
+      background-color: hsl(252, 100%, 90%);
+      height: 0.35rem;
+      width: 100%;
+      margin: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .customize-theme .choose-size span
+    {
+      width: 1rem;
+      height: 1rem;
+      background: hsl(252, 100%, 90%);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .customize-theme .choose-size span.active 
+    {
+      background-color: var(--color-primary);
+    }
+
+    .customize-theme .color 
+    {
+      margin-top: var(--m-2);
+    }
+
+    .customize-theme .choose-color
+    {
+      background-color: var(--color-light);
+      border-radius: var(--border-radius);
+      padding: .6rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .customize-theme .choose-color span 
+    {
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      background-color: var(--color-primary);
+    }
+
+    .customize-theme .choose-color span:nth-child(1)
+    {
+      background: hsl(252, 75%, 60%);
+    }
+    .customize-theme .choose-color span:nth-child(2)
+    {
+      background: hsl(52, 75%, 60%);
+    }
+    .customize-theme .choose-color span:nth-child(3)
+    {
+      background: hsl(352, 75%, 60%);
+    }
+    .customize-theme .choose-color span:nth-child(4)
+    {
+      background: hsl(152, 75%, 60%);
+    }
+    .customize-theme .choose-color span:nth-child(5)
+    {
+      background: hsl(202, 75%, 60%);
+    }
+
+    .customize-theme .choose-color span.active
+    {
+      border: 5px solid #fff;
+    }
+
+    .customize-theme .background 
+    {
+      margin-top: var(--m-2);
+    }
+
+    .customize-theme .choose-bg
+    {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .6rem;
+    }
+    .customize-theme .choose-bg > div
+    {
+      padding: 0.8rem 0.20rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    }
     
+    .customize-theme .choose-bg > div.active 
+    {
+      border: 2px solid var(--color-primary);
+    }
+
+    .customize-theme .choose-bg .bg-1
+    {
+      background: var(--color-light);
+      color: var(--color-dark);
+    }
+
+    .customize-theme .choose-bg .bg-2
+    {
+      background: hsl(252, 30%, 17%);
+      color: #fff;
+    }
+
+    .customize-theme .choose-bg .bg-3
+    {
+      background: hsl(252, 30%, 10%);
+      color: #fff;
+    }
+
+    .customize-theme .choose-bg > div span 
+    {
+      width: 1.4rem;
+      height: 1.4rem;
+      border: 2px solid var(--color-gray);
+      border-radius: 50%;
+    }
+
+    
+
     
     /*========== Media Queries ==========*/
     @media only screen and (max-width:1200px)
