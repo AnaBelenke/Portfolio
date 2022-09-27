@@ -426,21 +426,359 @@
       height: 100%;
       border-radius: var(--border-radius);
     }
+    .about-content .skills .skill-item .skill-percent
+    {
+      position: absolute;
+      right: 0;
+      top: -2.25rem;
+    }
 
-
-
-
+    /*========== Icons experience ==========*/
+    .fact-item
+    {
+      flex: 0 0 25%; 
+      max-width: 25%;
+      margin-top: var(--m-2-5);
+      text-align: center;
+    }
+    .fact-item i 
+    {
+      font-size: var(--h2-font-size);
+      color: var(--color-gray);
+    }
 
     /*========== Services ==========*/
-    
+
+    .services .service-item
+    {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      display: flex;
+    }
+
+    .services .service-item .service-item-inner
+    {
+      border-radius: var(--border-radius);
+      padding: var(--card-padding);
+      text-align: center;
+      transform: translateY(0);
+    }
+
+    .services .service-item .service-item-inner:hover
+    {
+      transform: translateY(-0.625rem);
+    }
+
+    .services .service-item img 
+    {
+      margin-bottom: var(--m-0-75);
+    }
+
+    .service-item-inner .service-support img 
+    {
+      margin: -0.1rem;
+      height: 100px;
+    }
+
+    .service-item h3 
+    {
+      margin-bottom: var(--m-0-5);
+      color: #fff;
+    }
+
+    .service-item p 
+    {
+      color: #fff;
+    }
+    .text 
+    {
+      text-align: center;
+      margin-top: var(--m-1-5);
+    }
+    .text a 
+    {
+      color: var(--color-primary);
+      margin-top: var(--m-1-5); 
+    }
+
     /*========== Experience ==========*/
-    
+    .education 
+    {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .experience 
+    {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .timeline-box 
+    {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .timeline
+    {
+      background-color: var(--color-white);
+      padding: 1.9rem 0.95rem;
+      border-radius: var(--border-radius);
+      width: 100%;
+      position: relative;
+    }
+
+    .timeline .timeline-item 
+    {
+      position: relative;
+      padding-left: 2.5rem;
+      padding-bottom: 1.9rem;
+    }
+
+    .timeline .timeline-item:last-child
+    {
+      padding-bottom: 0;
+    }
+    .timeline .timeline-item::before 
+    {
+      content: '';
+      width: 1px;
+      position: absolute;
+      height: 100%;
+      left: var(--m-0-5);
+      background-color: var(--color-primary);
+      top: 0; 
+    }
+
+    .timeline .timeline-icon
+    {
+      position: absolute;
+      left: -0.25rem;
+      top: 0; 
+      font-size: 1.5rem;
+      background-color: var(--color-white);
+      color: var(--color-primary);
+    }
+    .timeline .timeline-date 
+    {
+      font-size: var(--small-font-size);
+      color: --color-gray
+    }
+
+    .timeline .timeline-date lni 
+    {
+      margin-right: 0.3rem;
+    }
+
+    .timeline .timeline-title
+    {
+      margin: var(--m-0-75) 0;
+    }
+
     /*========== Pricing ==========*/
+    .prices 
+    {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+    .prices:nth-child(odd)
+    {
+      margin-top: 1.5rem;
+    }
+    .prices:nth-child(1)
+    {
+      padding-left: 15px;
+    }
+    .prices:nth-child(3)
+    {
+      padding-right: 15px;
+    }
     
+    .price-item
+    {
+      padding: var(--card-padding);
+      background-color: var(--color-white);
+      text-align: center;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+
+    .price-item h3.plan
+    {
+      margin: var(--m-0-75);
+    }
+
+    .prices p 
+    {
+      margin-bottom: 1rem;
+    }
+
+    .price-item .price 
+    {
+      font-size: var(--h1-font-size);
+      font-weight: var(--font-semi-bold);
+    }
+    .price-item .price em 
+    {
+      font-style: normal;
+      font-size: var(--small-font-size);
+      margin-right: var(--m-0-5);
+      vertical-align: super;
+    }
+    .price-item .price span 
+    {
+      font-size: var(--normal-font-size);
+      margin-left: var(--m-0-75);
+    }
+    .price-item .btn 
+    {
+      margin-top: var(--m-1);
+    }
+    .price-item.best 
+    {
+      padding: 3.25rem 2.5rem;
+      z-index: 1; 
+      position: relative;
+    }
+    .price-item .badge 
+    {
+      position: absolute;
+      left: 0; 
+      top: 2.6rem; 
+      color: #fff;
+      background-color: var(--color-primary);
+      transform: rotate(-90deg);
+      padding: 0.4rem 0.75rem;
+      font-size: var(--small-font-size);
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+    }
+
     /*========== Portfolio ==========*/
-    
+    .portfolio .portfolio-filter
+    {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: var(--m-2-5);
+    }
+
+    .portfolio .portfolio-filter button
+    {
+      border: none;
+      background-color: transparent;
+      font-weight: var(--font-semi-bold);
+      text-transform: capitalize;
+      margin: 0 var(--m-0-75);
+      cursor: pointer; 
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+
+    .portfolio .portfolio-filter button#active 
+    {
+      color: var(--color-primary);
+      position: relative;
+    }
+
+    .portfolio .portfolio-filter button#active::before
+    {
+      content: '';
+      position: absolute;
+      bottom: -0.75rem;
+      left: 45%;
+      width: 0.3rem;
+      height: 0.3rem;
+      background-color: var(--color-primary);
+      border-radius: 50%;
+    }
+    .portfolio-item 
+    {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      margin-bottom: var(--m-1-5);
+    }
+    .portfolio-item-inner 
+    {
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-item .mask 
+    {
+      background: rgba(0, 0, 0, .9);
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .portfolio-item-inner:hover .mask
+    {
+      opacity: 0.9;
+    }
+    .portfolio-item .term
+    {
+      color: #fff;
+      background-color: var(--color-primary);
+      border-bottom-left-radius: 0.98rem;
+      border-bottom-right-radius: 0.98rem;
+      position: absolute;
+      top: 0;
+      left: var(--m-1-5);
+      font-size: var(--small-font-size);
+      display: inline-block;
+      padding: 0.1rem 0.625rem;
+      transform: translateY(-40px);
+      transition: 0.3s;
+    }
+    .portfolio-item h3 
+    {
+      color: #fff;
+      font-size: 1.25rem;
+      margin: 0 0 0.98rem;
+      padding: 0 1.25rem;
+      position: absolute;
+      top: 3.75rem;
+      transition: 0.3s;
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    .portfolio-item .more-button 
+    {
+      color: #fff;
+      position: absolute;
+      bottom: var(--m-1-5);
+      left: var(--m-1-5);
+      font-size: 1.6rem;
+      display: block;
+      background: var(--color-primary);
+      height: 2.5rem;
+      width: 2.5rem;
+      cursor: pointer;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      transition: 0.3s;
+      opacity: 0;
+    }
+    .portfolio-item-inner:hover h3, .portfolio-item-inner:hover span 
+    {
+      opacity: 1;
+      transform: translateY(0);
+    }
     /*========== Testimonial ==========*/
-    
+    .testimonial-swapper 
+    {
+      max-width: ;
+    }
+
     /*========== Blog ==========*/
     
     /*========== Contact ==========*/
