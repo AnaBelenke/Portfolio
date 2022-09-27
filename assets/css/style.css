@@ -840,15 +840,112 @@
       border-radius: .5rem;
     }
     
-
-
-
-
-
-
-
     /*========== Blog ==========*/
     
+    .blog-item 
+    {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+    
+    .blog-item .inner 
+    {
+      background: var(--color-white);
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      transform: translateY(0);
+      transition: .3s;
+    }
+
+    .blog-item .inner:hover
+    {
+      transform: translateY(-0.98rem);
+    }
+    
+    .blog-item .thumb 
+    {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-item .thumb img 
+    {
+      transform: scale(1);
+      transition: 0.3s;
+    }
+
+    .blog-item .thumb:hover img 
+    {
+      transform: scale(1.1);
+    }
+
+    .blog-item .category 
+    {
+      background-color: var(--color-primary);
+      border-bottom-left-radius: 0.98rem;
+      border-bottom-right-radius: 0.98rem;
+      color: #fff;
+      font-size: var(--small-font-size);
+      padding: 0.12rem 0.5rem;
+      position: absolute;
+      left: 1.25rem;
+      top: 0;
+      z-index: 1;
+    }
+
+    .blog-item .details 
+    {
+      padding: 1.25rem;
+    }
+
+    .blog-item .details .title 
+    {
+      line-height: 1.2;
+    }
+
+    .blog-item .details .title a:hover 
+    {
+      color: var(--color-primary);
+    }
+
+    .blog-item .meta 
+    {
+      font-size: var(--small-font-size);
+      color: var(--color-gray);
+      margin-top: 0.5rem;
+    }
+
+    .blog-item .meta li 
+    {
+      display: inline-block;
+    }
+
+    .blog-item .meta li:not(:last-child)
+    {
+      margin-right: 0.6rem;
+    }
+
+    .blog-item .meta li::after
+    {
+      content: '';
+      background: var(--color-gray);
+      border-radius: 50%;
+      display: inline-block;
+      height: 0.19rem;
+      width: 0.19rem;
+      margin-left: 0.6rem;
+      vertical-align: middle;
+    }
+
+    .blog-item .meta li:last-child::after
+    {
+      display: none;
+    }
+
+
+
+
+
     /*========== Contact ==========*/
     
     /*========== Footer ==========*/
