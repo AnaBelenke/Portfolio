@@ -53,8 +53,6 @@
     /*========== Scroll Bar ==========*/
     
     /*========== Responsive Typography ==========*/
-    
-    /*========== Base ==========*/
     @media screen and (max-width:992px)
     {
       :root 
@@ -66,6 +64,7 @@
         --small-font-size: .875rem;
       }
     }
+    /*========== Base ==========*/
     * 
     {
       margin: 0; 
@@ -243,6 +242,14 @@
     {
       color: var(--color-primary);
     }
+    .nav-close 
+    {
+      font-size: 1rem;
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+      cursor: pointer;
+    }
     .nav-btns
     {
       display: inline-flex;
@@ -254,6 +261,7 @@
       font-size: 1.15rem;
       cursor: pointer;
     }
+    .nav-close,
     .nav-toggle
     {
       display: none;
@@ -290,8 +298,9 @@
     .home .intro img
     {
       margin-bottom: var(--m-1);
-      height: 170px;
-      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      border-radius: 45%;
     }
     .home .intro .social-icons
     {
@@ -381,7 +390,8 @@
     }
     .about-img img
     {
-      height: 170px;
+      height: 160px;
+      width: 180px;
       border-radius: 50%;
     }
     .about-content
@@ -445,6 +455,11 @@
     }
 
     /*========== Icons experience ==========*/
+    .icons 
+    {
+      display: flex;
+      justify-content: center;
+    }
     .fact-item
     {
       flex: 0 0 25%; 
@@ -857,6 +872,7 @@
     {
       flex: 0 0 33.33%;
       max-width: 33.33%;
+      display: flex;
     }
     
     .blog-item .inner 
@@ -1090,6 +1106,7 @@
       display: grid;
       place-items: center;
       font-size: var(--small-font-size);
+      display: none;
     }
 
     .customize-theme .card 
@@ -1244,27 +1261,192 @@
       border-radius: 50%;
     }
 
-    
-
-    
     /*========== Media Queries ==========*/
     @media only screen and (max-width:1200px)
     {
-      
+      .customize-theme .card
+      {
+        width: 50vw;
+      }
     }
     @media only screen and (max-width:968px)
     {
-      
+      .about-content, 
+      .about-img
+      {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .about-img
+      {
+        text-align: center;
+        margin-bottom: var(--m-2-5);
+      }
+      .prices, 
+      .services .service-item
+      {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: var(--m-2-5);
+      }
+      .price-item.best
+      {
+        padding: var(--card-padding);
+      }
+      .prices:nth-child(odd)
+      {
+        margin-top: 0;
+      }
+      .prices:nth-child(1)
+      {
+        padding-right: 15px;
+      }
+      .prices:nth-child(2)
+      {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      .prices:nth-child(3)
+      {
+        padding-left: 15px;
+      }
+      .customize-theme .card
+      {
+        width: 58vw;
+      }
     }
     @media only screen and (max-width:768px)
     {
+      body
+      {
+        margin: var(--header-height) 0 0 0;
+      }
+      .container
+      {
+        max-width: 568px;
+      }
+      .nav
+      {
+        height: var(--header-height);
+      }
+      .nav-list
+      {
+        flex-direction: column;
+        row-gap: 1.5rem;
+      }
+      .nav-menu
+      {
+        position: fixed;
+        background: var(--color-white);
+        width: 80%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        padding: 4rem 0 0 3rem;
+        border-radius: 1rem 0 0 1rem;
+        z-index: 100;
+        transition: .3s;
+      }
+      /* show menu */
+      .show-menu
+      {
+        right: 0;
+      }
+      .nav-close,
+      .nav-toggle
+      {
+        display: inline-flex;
+      }
+      .icons
+      {
+        justify-content: space-between;
+      }
       
+      .contact-data,
+      .contact-form,
+      .prices,
+      .education, 
+      .experience,
+      .services .service-item,
+      .about-content .about-text,
+      .about-content .skills
+      {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .fact-item,
+      .blog-item,
+      .portfolio-item
+      {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .about-content .about-text
+      {
+        margin-bottom: var(--m-1-5);
+      }
+      .contact-data,
+      .blog-item,
+      .education
+      {
+        margin-bottom: var(--m-2-5);
+      }
+      .customize-theme .card
+      {
+        width: 75vw;
+      }
     }
     @media only screen and (max-width:576px)
     {
-      
+      .home .intro img
+      {
+        margin-bottom: var(--m-1);
+        height: 70%;
+        width: 70%;
+        border-radius: 45%;
+      }
+      .about-img img
+    {
+      height: 125px;
+      width: 150px;
+      border-radius: 50%;
+    }
+      .blog-item,
+      .portfolio-item
+      {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .blog-item .inner,
+      .portfolio-item-inner
+      {
+        max-width: 360px;
+        margin: 0 auto;
+      }
+      .timeline
+      {
+        padding: 25px 20px;
+      }
+      .timeline .timeline-item
+      {
+        padding-left: 35px;
+        padding-bottom: 20px;
+      }
+      .row .skill-item h4
+      {
+        font-size: small;
+      }
+      .customize-theme .card
+      {
+        width: 96vw;
+        padding: 1rem;
+      }
     }
     @media only screen and (max-width:320px)
     {
-      
+      .fact-item
+      {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
     }
