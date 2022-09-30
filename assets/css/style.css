@@ -71,6 +71,10 @@
       padding: 0; 
       box-sizing: border-box;
     }
+    html
+    {
+      scroll-behavior: smooth;
+    }
     body, 
     button,
     input,textarea
@@ -281,7 +285,10 @@
       background-color: var(--color-primary);
       border-radius: 50%;
     }
-
+    .scroll-header 
+    {
+      box-shadow: 0 1px 4px rgba(165, 125, 125, 0.02);
+    }
     /*========== Home ==========*/
     .home
     {
@@ -1341,7 +1348,7 @@
         width: 80%;
         height: 100%;
         top: 0;
-        right: 100%;
+        right: -100%;
         padding: 4rem 0 0 3rem;
         border-radius: 1rem 0 0 1rem;
         z-index: 100;
