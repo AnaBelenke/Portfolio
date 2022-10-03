@@ -74,10 +74,17 @@ theme.addEventListener("click", openThemeModal);
 themeModal.addEventListener("click", closeThemeModal);
 
 /*===== FONTS =====*/
+const removeSizeSelector = () => {
+    fontSizes.forEach(size => {
+        size.classList.remove("active");
+    })
+}
 fontSizes.forEach(size => {
     size.addEventListener('click', () => {
+
+        removeSizeSelector();
         let fontSize; 
-        
+        size.classList.toggle('active');
         if(size.classList.contains('font-size-1'))
         {
             fontSize = '12px';
