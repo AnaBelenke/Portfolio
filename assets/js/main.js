@@ -51,6 +51,34 @@ var swiper = new Swiper(".testimonial-wrapper", {
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
+//get all sections that ave an id defined
+const sections = document.querySelectorAll("section[id]");
+
+//add an event listener listening for scroll 
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter()
+{
+    //get current scroll position
+    let scrollY = window.pageYOffset;
+    //now we loop through sections to get height, top and ID values for each 
+    sections.forEach(current => {
+        const sectionHeight = current.OffsetHeight;
+        const sectionTop = current.OffsetTop + 100,
+        sectionId = current.getAttribute("id");
+        /* Section scroll */
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
+        {
+            document.querySelector(".nav-menu a{href*=" + sectionId + "]".classList.add("active-link"))
+        }
+        else
+        {
+            document.querySelector(".nav-menu a{href*=" + sectionId + "]".classList.remove("active-link"))
+        }
+    }) 
+}
+
 /*=============== PORTFOLIO ITEM FILTER ===============*/
 const filterContainer = document.querySelector(".portfolio-filter-inner"),
     filterBtns = filterContainer.children,

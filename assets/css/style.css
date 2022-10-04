@@ -135,7 +135,7 @@
     
     .section .container 
     {
-      padding-left: 3.75rem;
+      padding-left: 4rem;
       padding-bottom: 4.75rem;
     }
     .section-title
@@ -1113,7 +1113,7 @@
 
     .footer 
     {
-      padding: 60px 0;
+      padding: 40px 0;
     }
 
     .footer-text
