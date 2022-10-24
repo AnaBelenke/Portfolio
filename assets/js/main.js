@@ -51,7 +51,7 @@ var swiper = new Swiper(".testimonial-wrapper", {
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
-//get all sections that ave an id defined
+//get all sections that have an id defined
 const sections = document.querySelectorAll("section[id]");
 
 //add an event listener listening for scroll 
@@ -63,18 +63,18 @@ function navHighlighter()
     let scrollY = window.pageYOffset;
     //now we loop through sections to get height, top and ID values for each 
     sections.forEach(current => {
-        const sectionHeight = current.OffsetHeight;
-        const sectionTop = current.OffsetTop + 100,
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 58,
         sectionId = current.getAttribute("id");
         /* Section scroll */
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
         {
-            document.querySelector(".nav-menu a{href*=" + sectionId + "]".classList.add("active-link"))
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add("active-link")
         }
         else
         {
-            document.querySelector(".nav-menu a{href*=" + sectionId + "]".classList.remove("active-link"))
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove("active-link")
         }
     }) 
 }
